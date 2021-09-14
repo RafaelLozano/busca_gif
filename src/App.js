@@ -1,7 +1,15 @@
+import { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { searchGif } from './api/searchGif';
 
 function App() {
+  useEffect(() => {
+    const data = searchGif('panda').then(res => {
+      console.log(res);
+    });
+    console.log('fetching data', data);
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
