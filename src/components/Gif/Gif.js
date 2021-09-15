@@ -4,7 +4,7 @@ const Gif = (props) => {
   return (
     <div>
       {/* <h1>{gif.title}</h1> */}
-      <img className="" src={gif.images.downsized_medium.url} />
+      <img className="gif" src={gif.images.downsized_medium.url} />
     </div>
   );
 };

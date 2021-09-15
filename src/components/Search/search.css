@@ -1,0 +1,21 @@
+:root{
+    --colorWhite:#FFFFFF;
+    --color-gray:#c1c1c1;
+}
+.search__container{
+    display: flex;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: var(--colorWhite);
+    border: .5px solid var(--color-gray);
+    margin: 15px 0;
+}
+.search__input{
+    width: 80%;
+    background-color: var(--colorWhite);
+    border: none;
+}
+.search__input:focus-visible{
+    border: none;
+    outline: none;
+}

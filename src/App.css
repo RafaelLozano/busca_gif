@@ -2,9 +2,14 @@
     --background_primary:#121212;
 }
 .app{
+    display: flex;
+    flex-direction: column;
     background-color: var(--background_primary);
+    padding: 5px 10px;
 }
 .list__gifs{
     display: grid;
+    grid-template-columns: repeat(auto-fit,minMax(300px,1fr));
+    gap: 5px;
     
 }
