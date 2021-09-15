@@ -1,31 +1,22 @@
-import { useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { searchGif } from './api/searchGif';
+import { useEffect, useState } from "react";
+import { searchGif } from "./api/searchGif";
+import "./App.css";
+import Gif from "./components/Gif/Gif";
 
 function App() {
+  const [gifs, setGifs] = useState([]);
   useEffect(() => {
-    const data = searchGif('panda').then(res => {
-      console.log(res);
+    searchGif("panda").then((res) => {
+      setGifs([...res.data]);
     });
-    console.log('fetching data', data);
   }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="list__gifs">
+        {gifs?.map((gif) => {
+          return <Gif key={gif.id} gif={gif} />;
+        })}
+      </div>
     </div>
   );
 }
