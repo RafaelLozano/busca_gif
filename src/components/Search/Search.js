@@ -5,7 +5,13 @@ const Search = (props) => {
   const { onSubmit } = props;
   const searchRef = useRef();
   return (
-    <div className="search__container">
+    <form
+      className="search__container"
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit(searchRef.current.value);
+      }}
+    >
       <svg
         fill="#000000"
         xmlns="http://www.w3.org/2000/svg"
@@ -22,14 +28,8 @@ const Search = (props) => {
         type="text"
         placeholder="Introduce una palabra clave para iniciar busqueda"
       />
-      <button
-        onClick={() => {
-          onSubmit(searchRef.current.value);
-        }}
-      >
-        Buscar
-      </button>
-    </div>
+      <button>Buscar</button>
+    </form>
   );
 };
 
