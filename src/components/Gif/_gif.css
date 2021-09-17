@@ -1,4 +1,14 @@
-.gif{
-    width: 100%;
-    overflow-y: hidden;
+.gif {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+p {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+div {
+  position: relative;
 }

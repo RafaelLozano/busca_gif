@@ -1,15 +1,23 @@
-:root{
-    --background_primary:#121212;
+:root {
+  --background_primary: #0d1117;
 }
-.app{
-    display: flex;
-    flex-direction: column;
+.app {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background_primary);
+  padding: 5px 10px;
+}
+.list__gifs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(220px, 1fr));
+  gap: 5px;
+}
+@media (min-width: 768px) {
+  .app {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+  body {
     background-color: var(--background_primary);
-    padding: 5px 10px;
-}
-.list__gifs{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minMax(300px,1fr));
-    gap: 5px;
-    
+  }
 }
