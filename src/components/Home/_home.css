@@ -13,7 +13,6 @@ header {
 }
 .header__logo img {
   max-width: 100%;
-  min-width: 200px;
 }
 .logo__img {
   max-width: 70%;
@@ -28,4 +27,20 @@ ul {
 ul li {
   color: white;
   margin: 0 10px;
+}
+@media (min-width: 768px) {
+  HamburgerButton {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  header {
+    justify-content: space-between;
+  }
+  .header__logo {
+    width: 45%;
+  }
 }
