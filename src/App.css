@@ -6,6 +6,7 @@
   flex-direction: column;
   background-color: var(--background_primary);
   padding: 5px 10px;
+  overflow-x: hidden;
 }
 .list__gifs {
   display: grid;
@@ -14,8 +15,16 @@
 }
 @media (min-width: 768px) {
   .app {
-    max-width: 70vw;
+    max-width: 80vw;
     margin: 0 auto;
+  }
+  body {
+    background-color: var(--background_primary);
+  }
+}
+@media (max-width: 768px) {
+  .app {
+    max-width: 100%;
   }
   body {
     background-color: var(--background_primary);

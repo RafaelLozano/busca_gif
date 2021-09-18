@@ -6,6 +6,7 @@ import ContextGifs from "../../context/GifsContext";
 import buscaGif from "../../assets/images/BuscaGif.png";
 import buscaGifLogo from "../../assets/images/Logo-buscalo.png";
 import "./_home.css";
+import HamburgerButton from "./Header/HamburgerButton";
 
 const Home = () => {
   const [keyWord, setKeyword] = useState("dbz");
@@ -17,10 +18,20 @@ const Home = () => {
     });
   }, [keyWord]);
   return (
-    <div>
+    <>
       <header>
-        {" "}
-        <img src={buscaGifLogo} />
+        <div className="header__logo">
+          <img src={buscaGifLogo} alt="Logo busca gif" />
+        </div>
+        <HamburgerButton />
+        <nav>
+          <ul>
+            <li>Reactions</li>
+            <li>Entretainment</li>
+            <li>Sports</li>
+            <li>Stickers</li>
+          </ul>
+        </nav>
       </header>
       <div className="logo">
         <img className="logo__img" src={buscaGif} alt="Busca gif logo" />
@@ -35,7 +46,7 @@ const Home = () => {
           return <Gif key={gif.id} gif={gif} />;
         })}
       </div>
-    </div>
+    </>
   );
 };
 

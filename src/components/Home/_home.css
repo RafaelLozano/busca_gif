@@ -4,6 +4,28 @@
   justify-content: center;
   align-items: center;
 }
+header {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  width: 30%;
+}
+.header__logo img {
+  max-width: 100%;
+  min-width: 200px;
+}
 .logo__img {
   max-width: 70%;
+}
+nav {
+  width: 70%;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+ul li {
+  color: white;
+  margin: 0 10px;
 }
