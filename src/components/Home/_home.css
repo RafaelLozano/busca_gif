@@ -7,6 +7,7 @@
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .header__logo {
   width: 30%;
@@ -36,9 +37,6 @@ ul li {
 @media (max-width: 768px) {
   nav {
     display: none;
-  }
-  header {
-    justify-content: space-between;
   }
   .header__logo {
     width: 45%;

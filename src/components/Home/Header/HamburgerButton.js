@@ -3,7 +3,8 @@ import "./_hamburgerButton.css";
 const HamburgerButton = () => {
   const [open, setOpen] = useState(false);
   const menuBtnRef = useRef(null);
-  const hanldeClick = () => {
+  const hanldeClick = (e) => {
+    e.preventDefault();
     setOpen(!open);
     open
       ? menuBtnRef.current.classList.add("open")
