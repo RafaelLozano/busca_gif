@@ -1,0 +1,25 @@
+.mobile__menu {
+  color: #fff;
+  background-color: rgba(200, 200, 200, 0.8);
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  right: -100%;
+}
+@keyframes showMenu {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+@keyframes hideMenu {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
